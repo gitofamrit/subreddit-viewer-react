@@ -10,13 +10,14 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  border-bottom: 2px solid #fff222;
+  box-shadow: 0px 0px 3px #fff222;
 }
 
 .App-link {
@@ -30,4 +31,48 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.search-box {
+  padding: 10px;
+  margin-top: 15px;
+  width: 400px;
+}
+
+.card {
+  cursor: pointer;
+  padding: 15px;
+  width: 400px;
+  min-height: 170px;
+  display: inline-block;
+}
+.card-wrapper:hover {
+  transform: scale(1.02);
+  background-color: #282c34;
+  box-shadow: 0px 0px 6px #fff222;
+  color: #fff;
+  border: 2px solid #fff222;
+}
+.card-wrapper:hover .upvote-img {
+  filter: invert(100%);
+}
+.footer {
+  cursor: default;
+  color: inherit;
+  font-size: 25px;
+  text-align: left;
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+.upvote-img {
+  height: 20px;
+  width: 20px;
+  margin-right: 3px;
+}
+.card-wrapper {
+  display: inline-block;
+  border: 2px solid #282c34;
+  margin: 20px;
+  border-radius: 12px;
+  transition: all linear 100ms;
 }
