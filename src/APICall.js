@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import NewsCard from "./NewsCard";
+import { SocialIcon } from "react-social-icons";
 
 // https://www.reddit.com/r/space.json
 
@@ -39,7 +40,7 @@ export default class APICall extends React.Component {
   }
   searchReddit(event) {
     if (event.key === "Enter") {
-      var subreddit = this.refs.subreddit.value;
+      var subreddit = this.refs.subreddit.value.trim();
       this.setState(
         {
           subreddit
@@ -50,16 +51,14 @@ export default class APICall extends React.Component {
   }
   render() {
     var inputComp = (
-      <div>
-        <input
-          type="text"
-          ref="subreddit"
-          onKeyDown={this.searchReddit}
-          className="search-box"
-          placeholder="Search Reddit"
-          autoFocus
-        />
-      </div>
+      <input
+        type="text"
+        ref="subreddit"
+        onKeyDown={this.searchReddit}
+        className="search-box"
+        placeholder="Search Reddit"
+        autoFocus
+      />
     );
     var cards = [],
       title;
@@ -84,13 +83,45 @@ export default class APICall extends React.Component {
           />
         )
       );
+      var footer = (
+        <div key="footer" className="App-footer">
+          Developed using ReactJS by Facebook.
+          <br /> API Credits - Reddit.
+          <br />
+          <SocialIcon
+            url="https://www.facebook.com/amritengineer"
+            bgColor="#fff"
+            fgColor="#3B5998"
+            style={{ margin: "10px" }}
+          />
+          <SocialIcon
+            url="https://www.twitter.com/AmritThEngineer"
+            bgColor="#fff"
+            fgColor="#55ACEE"
+            style={{ margin: "10px" }}
+          />
+          <SocialIcon
+            url="https://www.linkedin.com/in/amrittheengineer"
+            bgColor="#fff"
+            fgColor="#007bb5"
+            style={{ margin: "10px" }}
+          />
+          <SocialIcon
+            url="https://www.instagram.com/amrittheengineer"
+            bgColor="#fff"
+            fgColor="#cc0074"
+            style={{ margin: "10px" }}
+          />
+        </div>
+      );
+      cards.push(footer);
     }
     return (
       <div>
         <div className="App-header">
           <div id="page-title">Reddit Searcher</div>
           {inputComp}
-          <h1>{title}</h1>
+          <h1 className="title">{title}</h1>
         </div>
         {cards}
       </div>
