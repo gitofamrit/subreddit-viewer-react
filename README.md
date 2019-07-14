@@ -1,12 +1,12 @@
 ## Development Credits
 
-This is a React Web App to find Subreddit posts in [Reddit](reddit.com)
+This is a React Web App to find Subreddit posts in [Reddit](reddit.com).
 
-This project was developed by Amrit on July 14th 2019.
-
-Developed using React, Reddit API and [React Social Icons](http://jaketrent.github.io/react-social-icons/)
+Developed using React, Reddit API and [React Social Icons](http://jaketrent.github.io/react-social-icons/).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+This project was developed by Amrit on July 14th 2019.
 
 ## Available Scripts
 
