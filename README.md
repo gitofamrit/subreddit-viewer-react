@@ -1,3 +1,5 @@
+## Development Credits
+
 This is a React Web App to find Subreddit posts in [Reddit](reddit.com)
 
 This project was developed by Amrit on July 14th 2019.
